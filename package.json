@@ -1,0 +1,43 @@
+{
+  "name": "mui-metablockchain-sdk",
+  "version": "2.1.4",
+  "description": "JS SDK to interface with mui-metablockchain node",
+  "main": "src/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "babel ./src --presets babel-preset-es2015 --out-dir dist",
+    "test": "env PROVIDER_NETWORK=testnet mocha --timeout 80000 --exit",
+    "test:local": "env PROVIDER_NETWORK=local mocha --no-timeouts --exit",
+    "generate:docs": "jsdoc2md src/$FILE.js > docs/$FILE.md"
+  },
+  "dependencies": {
+    "@polkadot/api": "^9.6.2",
+    "@polkadot/types": "^9.6.2",
+    "@polkadot/util": "^10.1.11",
+    "@polkadot/util-crypto": "^10.1.11",
+    "axios": "^0.25.0",
+    "js-sha256": "^0.9.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jsdoc-to-markdown": "^7.1.0",
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SovereignWallet-Network/mui-metablockchain-sdk.git"
+  },
+  "author": "SWNGlobal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SovereignWallet-Network/mui-metablockchain-sdk/issues"
+  },
+  "homepage": "https://github.com/SovereignWallet-Network/mui-metablockchain-sdk#readme"
+}
